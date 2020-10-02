@@ -1,0 +1,27 @@
+# 对其进行简单的配置，模板引擎语法
+spring:
+  thymeleaf:
+    suffix: .html
+    prefix: classpath:/templates/pages/
+    cache: false
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/build?characterEncoding=utf8&useSSL=false&serverTimezone=GMT&allowPublicKeyRetrieval=true&allowMultiQueries=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123
+    type: com.alibaba.druid.pool.DruidDataSource
+#配置连接池，默认使用tomcat.jbc.pool作为连接池
+
+mybatis-plus:
+  type-aliases-package: com.xq.entity
+
+#日志输出sql语句
+logging:
+  level:
+    com.sanyang.dao : debug
+
+#  security:
+#    user:
+#      name: jia
+#      password: jia
+#      roles: user,admin # 角色
